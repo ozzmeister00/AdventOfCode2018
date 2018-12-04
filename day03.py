@@ -134,6 +134,7 @@ class Day03Solver(ProblemSolver):
                 if val > 1:
                     counter += 1
 
+        print("stashing off image to local instance")
         self.image = image
 
         return counter
@@ -143,8 +144,11 @@ class Day03Solver(ProblemSolver):
         Loop over all the pixels in the claim and return False if any value in the claim > 1
         """
         print(claim)
-        for x in range(claim.x, claim.w + claim.y):
-            for y in range(claim.y, claim.h + claim.y):
+        for w in range(claim.w):
+            for h in range(claim.h):
+                x = claim.x + w
+                y = claim.y + h
+                print(x, y)
                 if image.getpixel((x, y)) > 1:
                     return False
 
@@ -160,8 +164,7 @@ class Day03Solver(ProblemSolver):
             data = self.processed
 
         # make sure we have an image to operate on
-        if not self.image:
-            self.SolvePartOne(data=data)
+        self.SolvePartOne(data=data)
 
         # use the solver in part 1, that stores off an image of pixels, and get it out of part one
         image = self.image
