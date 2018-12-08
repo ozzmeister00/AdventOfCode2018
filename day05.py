@@ -28,6 +28,10 @@ After all possible reactions, the resulting polymer contains 10 units.
 
 How many units remain after fully reacting the polymer you scanned? (Note: in this puzzle and others,
 the input is large;  if you copy/paste your input, make sure you get the whole thing.)
+
+Speedups:
+-- You can go in reverse through the polymer so you don't have to move quite as much
+-- Then when you're resolving the polymer you know you can first try to react the stuff that you just collapsed
 """
 import string
 
