@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+test1.tga
+test.tga
+example.tga
+.idea/AdventOfCode2018.iml
+.idea/workspace.xml
+.idea/AdventOfCode2018.iml
+.idea/workspace.xml
